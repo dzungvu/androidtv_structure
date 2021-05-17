@@ -1,0 +1,129 @@
+def multidex = "2.0.1"
+def constraint_layout = '2.0.4'
+def app_compat = "1.2.0"
+def material = '1.3.0'
+def viewpager_2 = "1.0.0"
+def leak_canary = "2.2"
+def security_crypto = "1.1.0-alpha01"
+def common_codec = '20041127.091804'
+def lottie = '3.7.0'
+def async_layout_inflater = "1.0.0"
+
+def Deps = [:]
+ext.Deps = Deps
+Deps.multidex = "androidx.multidex:multidex:$multidex"
+Deps.constraint_layout = "androidx.constraintlayout:constraintlayout:$constraint_layout"
+Deps.app_compat = "androidx.appcompat:appcompat:$app_compat"
+Deps.app_compat_resources = "androidx.appcompat:appcompat-resources:$app_compat"
+Deps.android_material = "com.google.android.material:material:$material"
+Deps.viewpager_2 = "androidx.viewpager2:viewpager2:$viewpager_2"
+Deps.leak_canary = "com.squareup.leakcanary:leakcanary-android:$leak_canary"
+Deps.security_crypto = "androidx.security:security-crypto:$security_crypto"
+Deps.common_codec = "commons-codec:commons-codec:$common_codec"
+Deps.lottie = "com.airbnb.android:lottie:$lottie"
+Deps.async_layout_inflater = "androidx.asynclayoutinflater:asynclayoutinflater:$async_layout_inflater"
+Deps.guava = "com.google.guava:guava:30.1.1-jre"
+
+def kotlin_version = '1.5.0'
+def Kotlin = [:]
+ext.Kotlin = Kotlin
+Kotlin.gradle_plugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+Kotlin.stdlib = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+
+def retrofit_version = '2.9.0'
+def http_version = '5.0.0-alpha.2'
+def Retrofit = [:]
+ext.Retrofit = Retrofit
+Retrofit.core = "com.squareup.retrofit2:retrofit:$retrofit_version"
+Retrofit.converter = "com.squareup.retrofit2:converter-gson:$retrofit_version"
+Retrofit.logging_interceptor = "com.squareup.okhttp3:logging-interceptor:$http_version"
+
+def ktx_core_version = '1.3.2'
+def ktx_fragment_version = '1.3.3'
+def ktx_activity_version = "1.1.0"
+def ktx_paging = '3.0.0'
+def KTX = [:]
+ext.KTX = KTX
+KTX.core = "androidx.core:core-ktx:$ktx_core_version"
+KTX.fragment = "androidx.fragment:fragment-ktx:$ktx_fragment_version"
+KTX.activity = "androidx.activity:activity-ktx:$ktx_activity_version"
+KTX.paging = "androidx.paging:paging-runtime:$ktx_paging"
+
+def firebase_core_version = "17.5.0"
+def firebase_message_version = "20.2.4"
+def Firebase = [:]
+ext.Firebase = Firebase
+Firebase.core = "com.google.firebase:firebase-core:$firebase_core_version"
+Firebase.message = "com.google.firebase:firebase-messaging:$firebase_message_version"
+Firebase.analytics = "com.google.firebase:firebase-analytics-ktx"
+Firebase.crashlytics = "com.google.firebase:firebase-crashlytics-ktx"
+Firebase.bom = "com.google.firebase:firebase-bom:26.8.0"
+
+def coroutines_version = '1.5.0-RC-native-mt'
+def Coroutines = [:]
+ext.Coroutines = Coroutines
+Coroutines.core = "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_version"
+Coroutines.android = "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_version"
+
+def lifecycle_version = '2.2.0'
+def lifecycle_data_vm_version = '2.3.1'
+def Lifecycle = [:]
+ext.Lifecycle = Lifecycle
+Lifecycle.extensions = "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
+Lifecycle.viewmodel = "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_data_vm_version"
+Lifecycle.livedata_ktx = "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_data_vm_version"
+Lifecycle.runtime_ktx = "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version"
+
+def room_version = '2.3.0'
+def Room = [:]
+ext.Room = Room
+Room.runtime = "androidx.room:room-runtime:$room_version"
+Room.complier = "androidx.room:room-compiler:$room_version"
+Room.ktx = "androidx.room:room-ktx:$room_version"
+
+def dagger_version = "2.27"
+def Dagger = [:]
+ext.Dagger = Dagger
+Dagger.android = "com.google.dagger:dagger-android:$dagger_version"
+Dagger.android_support = "com.google.dagger:dagger-android-support:$dagger_version"
+Dagger.compiler = "com.google.dagger:dagger-compiler:$dagger_version"
+Dagger.android_processor = "com.google.dagger:dagger-android-processor:$dagger_version"
+
+def dagger_hilt_version = '2.35.1'
+def hilt_vm_version = '1.0.0-alpha03'
+def hilt_compiler_version = '1.0.0'
+def Hilt = [:]
+ext.Hilt = Hilt
+Hilt.android = "com.google.dagger:hilt-android:$dagger_hilt_version"
+Hilt.android_compiler = "com.google.dagger:hilt-android-compiler:$dagger_hilt_version"
+Hilt.android_gradle_plugin = "com.google.dagger:hilt-android-gradle-plugin:$dagger_hilt_version"
+Hilt.lifecycle_viewmodel = "androidx.hilt:hilt-lifecycle-viewmodel:$hilt_vm_version"
+Hilt.compiler = "androidx.hilt:hilt-compiler:$hilt_compiler_version"
+
+def nav_version = '2.3.5'
+def Navigation = [:]
+ext.Navigation = Navigation
+Navigation.fragment_ktx = "androidx.navigation:navigation-fragment-ktx:$nav_version"
+Navigation.ui_ktx = "androidx.navigation:navigation-ui-ktx:$nav_version"
+
+def glide_version = '4.12.0'
+def Glide = [:]
+ext.Glide = Glide
+Glide.glide = "com.github.bumptech.glide:glide:$glide_version"
+Glide.compiler = "com.github.bumptech.glide:compiler:$glide_version"
+
+def leanback_version = '1.1.0-rc01'
+def Leanback = [:]
+ext.Leanback = Leanback
+Leanback.leanback = "androidx.leanback:leanback:$leanback_version"
+Leanback.paging = "androidx.leanback:leanback-paging:1.1.0-alpha07"
+Leanback.tab = "androidx.leanback:leanback-tab:1.1.0-beta01"
+
+def junit_version = '4.13.2'
+def runner_version = "1.3.0"
+def espresso_version = "3.3.0"
+def TestDeps = [:]
+ext.TestDeps = TestDeps
+TestDeps.junit = "junit:junit:$junit_version"
+TestDeps.runner = "androidx.test:runner:$runner_version"
+TestDeps.espresso_core = "androidx.test.espresso:espresso-core:$espresso_version"

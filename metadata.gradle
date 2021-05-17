@@ -1,0 +1,21 @@
+//TODO Remember to build both bundle and APK
+def version_code = 10000
+def version_name = "1.0.0"
+//TODO Remember to build both bundle and APK
+
+def Versions = [:]
+ext.Versions = Versions
+Versions.compile_sdk = 30
+Versions.min_sdk = 23
+Versions.target_sdk = 30
+Versions.version_name = version_name
+Versions.version_code = version_code
+
+def app_name = "TV Structure"
+def MetaData = [:]
+ext.MetaData = MetaData
+MetaData.apk_name = "$app_name-v$version_name($version_code)"
+MetaData.application_id = "com.thedung.tvstructure"
+MetaData.native_lib = "native-lib"
+MetaData.app_name = app_name
+MetaData.app_name_dev = "$app_name DEV"
