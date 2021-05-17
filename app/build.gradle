@@ -1,11 +1,10 @@
-plugins {
-    id 'com.android.application'
-    id 'kotlin-android'
-}
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 android {
-    compileSdkVersion 30
-    buildToolsVersion "30.0.3"
+    compileSdkVersion Versions.compile_sdk
 
     defaultConfig {
         applicationId MetaData.application_id
@@ -14,13 +13,62 @@ android {
         versionCode Versions.version_code
         versionName Versions.version_name
 
+        multiDexEnabled true
+        setProperty("archivesBaseName", MetaData.apk_name)
+    }
+
+    flavorDimensions "mode"
+
+    productFlavors {
+        dev {
+            manifestPlaceholders = [appName: MetaData.app_name_dev]
+            buildConfigField "Boolean", "DEBUG_MODE", "true"
+        }
+        product {
+            manifestPlaceholders = [appName: MetaData.app_name]
+            buildConfigField "Boolean", "DEBUG_MODE", "false"
+        }
     }
 
     buildTypes {
+
         release {
-            minifyEnabled false
+            minifyEnabled true
+            shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            resValue "string", "app_name", MetaData.app_name
+            manifestPlaceholders = [appNameSuffix: ""]
         }
+
+        debug {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            resValue "string", "app_name", MetaData.app_name
+            manifestPlaceholders = [appNameSuffix: " Debug"]
+            applicationIdSuffix = ".debug"
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    androidExtensions {
+        experimental = true
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
     }
 }
 

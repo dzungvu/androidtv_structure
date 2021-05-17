@@ -1,4 +1,6 @@
 <resources>
 
-    <style name="Theme.AndroidTVStructure" parent="@style/Theme.Leanback" />
+    <style name="AppTheme.SplashScreenTheme" parent="Theme.AppCompat.NoActionBar" />
+
+    <style name="AppTheme" parent="@style/Theme.Leanback" />
 </resources>
