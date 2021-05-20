@@ -1,3 +1,5 @@
 <resources>
 
+    <string name="home">HOME</string>
+    <string name="splashscreen">SPLASHSCREEN</string>
 </resources>
