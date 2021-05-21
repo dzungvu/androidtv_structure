@@ -1,17 +1,20 @@
 package com.thedung.androidtvstructure.ui.home
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.thedung.androidtvstructure.R
 import com.thedung.androidtvstructure.classes.bases.BaseActivity
+import com.thedung.androidtvstructure.classes.delegates.viewBinding
+import com.thedung.androidtvstructure.databinding.ActivityHomeBinding
 
 class HomeActivity : BaseActivity() {
+
+    private val binding by viewBinding(ActivityHomeBinding::inflate)
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_home)
+        setContentView(binding.root)
     }
 
-    override fun initView() {
+    override fun initViews() {
 
     }
 
