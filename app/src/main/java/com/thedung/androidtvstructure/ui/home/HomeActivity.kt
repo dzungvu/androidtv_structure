@@ -4,10 +4,12 @@ import android.os.Bundle
 import com.thedung.androidtvstructure.classes.bases.BaseActivity
 import com.thedung.androidtvstructure.classes.delegates.viewBinding
 import com.thedung.androidtvstructure.databinding.ActivityHomeBinding
+import com.thedung.fsocket.builder.FSocketBuilder
 
 class HomeActivity : BaseActivity() {
 
     private val binding by viewBinding(ActivityHomeBinding::inflate)
+    val socket = FSocketBuilder("").build().connect()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
