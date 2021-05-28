@@ -20,6 +20,9 @@ class AppConfig @Inject constructor(context: Context) {
         private const val LANGUAGE = "LANGUAGE"
         const val LANGUAGE_EN = "en"
         const val LANGUAGE_VN = "vi"
+
+        const val TOKEN = "token"
+        const val REFRESH_TOKEN = "refresh_token"
     }
 
     private val sharedPreferences: SharedPreferences by lazy {
@@ -29,4 +32,12 @@ class AppConfig @Inject constructor(context: Context) {
     var isFirstActive: Boolean
         get() = sharedPreferences.getBoolean(APP_FIRST_ACTIVE, false)
         set(value) = sharedPreferences.edit { putBoolean(APP_FIRST_ACTIVE, value) }
+
+    var token: String
+        get() = sharedPreferences.getString(TOKEN, "").orEmpty()
+        set(value) = sharedPreferences.edit { putString(TOKEN, value) }
+
+    var refreshToken: String
+        get() = sharedPreferences.getString(REFRESH_TOKEN, "").orEmpty()
+        set(value) = sharedPreferences.edit { putString(REFRESH_TOKEN, value) }
 }

@@ -1,0 +1,3 @@
+package com.thedung.androidtvstructure.classes.auth
+
+class TokenAuthenticationManager
