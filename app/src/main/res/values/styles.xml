@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="FocusStyle">
+        <item name="android:focusable">true</item>
+        <item name="android:focusableInTouchMode">true</item>
+    </style>
+
+    <style name="ButtonHome" parent="FocusStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/dp22</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingStart">@dimen/dp12</item>
+        <item name="android:paddingEnd">@dimen/dp12</item>
+        <item name="android:background">@drawable/home_button_background</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textSize">@dimen/sp9</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/home_button_text_color_selector</item>
+        <item name="android:drawableTint">@color/home_button_text_color_selector</item>
+        <item name="android:backgroundTint">@color/home_button_background_color_selector</item>
+    </style>
+
+</resources>

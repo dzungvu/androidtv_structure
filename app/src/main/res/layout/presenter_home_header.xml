@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.thedung.androidtvstructure.classes.layouts.PersistentFocusWrapper xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/headerRoot"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp148"
+    android:paddingStart="@dimen/dp70">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnAction"
+            style="@style/ButtonHome"
+            android:drawableStart="@drawable/ic_home_view_now"
+            android:drawablePadding="@dimen/dp6"
+            android:nextFocusRight="@id/btnDetail"
+            android:nextFocusUp="@id/btnAction"
+            android:text="@string/view_now" />
+
+        <Button
+            android:id="@+id/btnDetail"
+            style="@style/ButtonHome"
+            android:layout_marginStart="@dimen/dp8"
+            android:drawableStart="@drawable/ic_home_view_details"
+            android:drawablePadding="@dimen/dp6"
+            android:nextFocusLeft="@id/btnAction"
+            android:nextFocusRight="@id/btnDetail"
+            android:nextFocusUp="@id/btnDetail"
+            android:text="@string/view_detail" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvHeaderTitle"
+        android:layout_width="@dimen/dp210"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp50"
+        android:gravity="bottom"
+        android:lines="2"
+        android:layout_gravity="bottom"
+        android:maxLines="2"
+        android:textAllCaps="true"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/sp15"
+        tools:text="Spider man - far from home" />
+
+    <ImageView
+        android:id="@+id/ivHeaderTitle"
+        android:layout_width="@dimen/dp210"
+        android:layout_height="@dimen/dp40"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="@dimen/dp50"/>
+
+
+    <TextView
+        android:id="@+id/tvHeaderGenre"
+        android:layout_width="@dimen/dp225"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp100.5"
+        android:textColor="#99FFFFFF"
+        android:textSize="@dimen/sp8"
+        tools:text="Hành động - Mỹ - 2019 - 16+" />
+
+</com.thedung.androidtvstructure.classes.layouts.PersistentFocusWrapper>

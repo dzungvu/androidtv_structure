@@ -11,6 +11,8 @@ import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton
+import com.thedung.androidtvstructure.utils.GlideApp
+import com.thedung.androidtvstructure.utils.GlideRequests
 
 @Module
 @InstallIn(SingletonComponent::class)
@@ -32,4 +34,9 @@ object AppModule {
     @Singleton
     fun providesGsonConvertFactory(gson: Gson): GsonConverterFactory =
         GsonConverterFactory.create(gson)
+
+    @Provides
+    @Singleton
+    fun providesGlideRequests(@ApplicationContext context: Context): GlideRequests =
+        GlideApp.with(context)
 }

@@ -2,4 +2,6 @@
 
     <string name="home">HOME</string>
     <string name="splashscreen">SPLASHSCREEN</string>
+    <string name="view_now">Xem ngay</string>
+    <string name="view_detail">Xem chi tiết</string>
 </resources>
