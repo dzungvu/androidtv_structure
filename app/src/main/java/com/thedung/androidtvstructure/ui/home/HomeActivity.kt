@@ -9,7 +9,6 @@ import com.thedung.fsocket.builder.FSocketBuilder
 class HomeActivity : BaseActivity() {
 
     private val binding by viewBinding(ActivityHomeBinding::inflate)
-    val socket = FSocketBuilder("").build().connect()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

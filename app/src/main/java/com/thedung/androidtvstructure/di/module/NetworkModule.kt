@@ -8,6 +8,7 @@ import com.thedung.androidtvstructure.classes.exceptions.CannotBuildUrlException
 import com.thedung.androidtvstructure.classes.exceptions.NetworkTimeoutException
 import com.thedung.androidtvstructure.classes.network_adapter.NetworkResponseAdapterFactory
 import com.thedung.androidtvstructure.data.services.AuthenticationService
+import com.thedung.androidtvstructure.data.services.HomeService
 import com.thedung.androidtvstructure.utils.LogUtil
 import com.thedung.androidtvstructure.utils.debug
 import dagger.Module
@@ -207,6 +208,11 @@ class NetworkModule {
     @Reusable
     fun provideAuthService(@NormalClient retrofit: Retrofit): AuthenticationService =
         retrofit.create(AuthenticationService::class.java)
+
+    @Provides
+    @Reusable
+    fun provideHomeService(@AuthClient retrofit: Retrofit): HomeService =
+        retrofit.create(HomeService::class.java)
 }
 
 @Qualifier
